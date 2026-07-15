@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr;
     min-height: 100vh;
     align-items: center;
-    padding: 0 8%;
+    padding: 0 4%;
 }
 
 .content{
@@ -27,7 +27,7 @@
 }
 
 .content h2{
-    font-size: 5rem;
+    font-size: 6rem;
     line-height: 1;
     font-weight: 800;
     letter-spacing: normal;
@@ -40,7 +40,7 @@
     font-weight: 400;
     letter-spacing: .2rem;
     color: var(--text);
-    max-width: 550px;
+    max-width: 480px;
 }
 
 .image{
@@ -51,8 +51,25 @@
 
 .image img{
     width: 100%;
-    max-width: 650px;
+    max-width: 700px;
     border-radius: 1rem;
     object-fit: cover;
     height: 570px;
+}
+
+.button{
+    padding: 15px 32px;
+    font-size: 1rem;
+    border:none;
+    border-radius:999px;
+    cursor:pointer;
+    transition: all .3s ease;
+    font-weight:600;
+    background:var(--coffee);
+    color:var(--cream);
+}
+
+.button:hover{
+    background:var(--blue);
+    color:var(--cream);
 }

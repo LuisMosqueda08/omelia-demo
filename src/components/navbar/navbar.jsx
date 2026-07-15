@@ -1,5 +1,6 @@
 import logo from '../../assets/logo/logo.jpg';
 import styles from "./navbar.module.css";
+import { useState, useEffect, useActionState } from "react";
 
 const links = [
   "Inicio",
@@ -10,8 +11,25 @@ const links = [
 ];
 
 const Navbar = () => {
+
+    const [scrolled, setScrolled] = useState(false);
+
+    const handleScroll = () => {
+    setScrolled(window.scrollY > 50);
+    };
+
+    useEffect(() => {
+        handleScroll();
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
   return (
-        <nav className={styles.navbar}>
+        <nav className={ scrolled ? `${styles.navbar} ${styles.scrolled}`: styles.navbar}>
     <div className={styles.logo}>
         <img src={logo} alt="Logo Omelia" />
     </div>
