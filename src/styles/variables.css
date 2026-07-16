@@ -14,4 +14,11 @@
 
 --white:#FFFFFF;
 
+--content-max-width:1440px;
+--page-padding:clamp(1rem,4vw,4rem);
+--section-spacing:clamp(4rem,9vw,8rem);
+--navbar-height:clamp(4.5rem,8vw,6.25rem);
+--radius-medium:1rem;
+--transition-fast:200ms ease;
+
 }

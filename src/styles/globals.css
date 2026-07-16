@@ -45,3 +45,20 @@ font-family:inherit;
 cursor:pointer;
 
 }
+
+button,a{
+    -webkit-tap-highlight-color:transparent;
+}
+
+:focus-visible{
+    outline:3px solid var(--blue);
+    outline-offset:4px;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+@media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+}
