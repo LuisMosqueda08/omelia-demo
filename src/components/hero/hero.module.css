@@ -46,6 +46,11 @@
     align-items:center;
 }
 
+.image img:hover{
+    transform:scale(1.05);
+    transition:transform var(--transition-fast);
+}
+
 .image img{
     width:100%;
     max-width:700px;
@@ -95,5 +100,8 @@
         flex-direction:column;
     }
 
-    .button{width:100%;}
+    .button{
+        width:100%;
+        margin-top:12px;
+    }
 }
