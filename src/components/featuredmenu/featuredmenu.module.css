@@ -1,6 +1,6 @@
-.cardsGrid{
+.cardsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /*1fr 1fr 1fr;*/
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 2rem;
 }
 
@@ -13,12 +13,12 @@
     margin: 0 auto;
 }
 
-.heading{
+.heading {
     max-width: 650px;
     margin-bottom: 3rem;
 }
 
-.heading span{
+.heading span {
     display: inline-block;
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
@@ -28,13 +28,13 @@
     color: var(--coffee);
 }
 
-.heading h2{
+.heading h2 {
     margin-bottom: 0.75rem;
     font-size: clamp(2rem, 4vw, 3rem);
     line-height: 1.1;
 }
 
-.heading p{
+.heading p {
     max-width: 550px;
     line-height: 1.7;
     color: var(--text-muted);
