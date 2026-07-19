@@ -1,0 +1,41 @@
+.cardsGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /*1fr 1fr 1fr;*/
+    gap: 2rem;
+}
+
+.menu {
+    padding: 6rem 8%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.heading{
+    max-width: 650px;
+    margin-bottom: 3rem;
+}
+
+.heading span{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--coffee);
+}
+
+.heading h2{
+    margin-bottom: 0.75rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+}
+
+.heading p{
+    max-width: 550px;
+    line-height: 1.7;
+    color: var(--text-muted);
+}
