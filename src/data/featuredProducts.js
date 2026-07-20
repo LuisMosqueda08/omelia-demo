@@ -12,6 +12,14 @@ export const featuredProducts = [
     description:
       "Enchiladas rellenas de pollo guisado, bañadas en salsa cremosa verde y perfectamente gratinadas.",
     image: Enchiladassuizas,
+    ingredients: [
+      "Tortillas de maíz",
+      "Pollo deshebrado",
+      "Salsa verde",
+      "Crema",
+      "Queso manchego",
+      "Cebolla",
+    ],
   },
   {
     id: 2,
@@ -19,6 +27,15 @@ export const featuredProducts = [
     description:
       "Elige tu pan favorito: baguette, chapata o pan de sándwich.",
     image: ChickenBacon,
+    ingredients: [
+      "Pan artesanal",
+      "Pechuga de pollo",
+      "Tocino",
+      "Queso cheddar",
+      "Lechuga",
+      "Tomate",
+      "Aderezo especial",
+    ],
   },
   {
     id: 3,
@@ -26,6 +43,13 @@ export const featuredProducts = [
     description:
       "Frappuccino de café con chocolate, perfecto para endulzar tu día en Omelia Café.",
     image: FrappuccinoDecafe,
+    ingredients: [
+      "Café espresso",
+      "Leche",
+      "Hielo",
+      "Chocolate",
+      "Crema batida",
+    ],
   },
   {
     id: 4,
@@ -33,6 +57,14 @@ export const featuredProducts = [
     description:
       "Bechamel, morrón, serrano, camarones y un toque picante que lo cambia todo.",
     image: PastaBechamel,
+    ingredients: [
+      "Pasta",
+      "Salsa bechamel",
+      "Camarones",
+      "Chile serrano",
+      "Morrón",
+      "Queso parmesano",
+    ],
   },
   {
     id: 5,
@@ -40,6 +72,14 @@ export const featuredProducts = [
     description:
       "Servido con galleta y salsa Lotus, frutos rojos y helado de vainilla.",
     image: Panfrances,
+    ingredients: [
+      "Pan brioche",
+      "Canela",
+      "Frutos rojos",
+      "Helado de vainilla",
+      "Salsa Lotus",
+      "Galleta triturada",
+    ],
   },
   {
     id: 6,
@@ -47,5 +87,12 @@ export const featuredProducts = [
     description:
       "Mango, limón y agua mineral se combinan en una bebida fresca, ligera y deliciosa.",
     image: LimonadaMineral,
+    ingredients: [
+      "Mango",
+      "Limón",
+      "Agua mineral",
+      "Hielo",
+      "Jarabe natural",
+    ],
   },
 ];

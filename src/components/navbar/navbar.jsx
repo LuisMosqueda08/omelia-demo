@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import gsap from "gsap";
 import logo from "../../assets/logo/logo.jpg";
 import styles from "./navbar.module.css";
 
@@ -21,7 +22,32 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const closeMenu = () => setMenuOpen(false);
+  const handleNavigation = (event, href) => {
+    event.preventDefault();
+
+    const section = document.getElementById(href.slice(1));
+    if (!section) return;
+
+    setMenuOpen(false);
+
+    const navbarHeight = event.currentTarget
+      .closest("nav")
+      ?.getBoundingClientRect().height ?? 0;
+    const targetY = Math.max(
+      0,
+      section.getBoundingClientRect().top + window.scrollY - navbarHeight
+    );
+    const scrollPosition = { y: window.scrollY };
+
+    gsap.to(scrollPosition, {
+      y: targetY,
+      duration: 1,
+      ease: "power2.inOut",
+      overwrite: true,
+      onUpdate: () => window.scrollTo(0, scrollPosition.y),
+      onComplete: () => window.history.pushState(null, "", href),
+    });
+  };
 
   return (
     <nav
@@ -29,7 +55,12 @@ const Navbar = () => {
       aria-label="Navegación principal"
     >
       <div className={styles.inner}>
-        <a className={styles.logo} href="#inicio" aria-label="Omelia, ir al inicio">
+        <a
+          className={styles.logo}
+          href="#inicio"
+          aria-label="Omelia, ir al inicio"
+          onClick={(event) => handleNavigation(event, "#inicio")}
+        >
           <img src={logo} alt="" />
         </a>
 
@@ -53,12 +84,21 @@ const Navbar = () => {
           <ul className={styles.navLinks}>
             {links.map(({ label, href }) => (
               <li key={href}>
-                <a href={href} onClick={closeMenu}>{label}</a>
+                <a
+                  href={href}
+                  onClick={(event) => handleNavigation(event, href)}
+                >
+                  {label}
+                </a>
               </li>
             ))}
           </ul>
 
-          <a className={styles.button} href="#contacto" onClick={closeMenu}>
+          <a
+            className={styles.button}
+            href="#contacto"
+            onClick={(event) => handleNavigation(event, "#contacto")}
+          >
             Reservar
           </a>
         </div>
