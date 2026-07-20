@@ -2,7 +2,7 @@ import Enchiladassuizas from "../assets/menu/Enchiladas-suizas.png";
 import ChickenBacon from "../assets/menu/ChickenAndBacon.png";
 import FrappuccinoDecafe from "../assets/menu/FrappuccinoCafe.png";
 import PastaBechamel from "../assets/menu/PastaBechamel.png";
-import Panfrances from "../assets/menu/Panfrances.png";
+import Panfrances from "../assets/menu/PanFrances.png";
 import LimonadaMineral from "../assets/menu/LimonadaMineral.png";
 
 export const featuredProducts = [
