@@ -1,0 +1,102 @@
+.gallery {
+    padding: var(--section-spacing) var(--page-padding);
+    background: color-mix(in srgb, var(--beige) 42%, var(--cream));
+}
+
+.container {
+    width: min(100%, var(--content-max-width));
+    margin-inline: auto;
+}
+
+.heading {
+    max-width: 46rem;
+    margin-bottom: clamp(2.5rem, 6vw, 5rem);
+}
+
+.heading span {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--blue);
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: .25rem;
+    text-transform: uppercase;
+}
+
+.heading h2 {
+    max-width: 42rem;
+    margin-bottom: 1.25rem;
+    color: var(--text);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.05;
+}
+
+.heading p {
+    max-width: 38rem;
+    color: var(--text);
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    line-height: 1.8;
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-auto-rows: clamp(10rem, 15vw, 14rem);
+    gap: clamp(1rem, 2vw, 2rem);
+}
+
+.cardsGrid > :nth-child(1),
+.cardsGrid > :nth-child(4) {
+    grid-column: span 8;
+    grid-row: span 2;
+}
+
+.cardsGrid > :nth-child(2),
+.cardsGrid > :nth-child(3) {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.cardsGrid > :nth-child(5),
+.cardsGrid > :nth-child(6) {
+    grid-column: span 6;
+    grid-row: span 2;
+}
+
+@media (max-width: 800px) {
+    .cardsGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: clamp(14rem, 48vw, 22rem);
+    }
+
+    .cardsGrid > :nth-child(n) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .cardsGrid > :first-child,
+    .cardsGrid > :nth-child(4) {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 520px) {
+    .gallery {
+        padding-block: calc(var(--section-spacing) * .75);
+    }
+
+    .heading {
+        margin-bottom: 2.5rem;
+    }
+
+    .cardsGrid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        gap: 1.25rem;
+    }
+
+    .cardsGrid > :nth-child(n) {
+        grid-column: 1;
+    }
+}
