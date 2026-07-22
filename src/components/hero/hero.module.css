@@ -76,6 +76,39 @@
     color:var(--cream);
 }
 
+.whatsappButton{
+    position:fixed;
+    right:clamp(1rem,3vw,2rem);
+    bottom:clamp(1rem,3vw,2rem);
+    z-index:900;
+    display:grid;
+    place-items:center;
+    width:4rem;
+    height:4rem;
+    border-radius:50%;
+    background:#25d366;
+    color:#fff;
+    box-shadow:0 8px 24px rgba(0,0,0,.22);
+    transition:transform var(--transition-fast),background-color var(--transition-fast),box-shadow var(--transition-fast);
+}
+
+.whatsappButton svg{
+    width:2.15rem;
+    height:2.15rem;
+    fill:currentColor;
+}
+
+.whatsappButton:hover{
+    background:#1fbd5a;
+    transform:translateY(-3px) scale(1.04);
+    box-shadow:0 12px 28px rgba(0,0,0,.27);
+}
+
+.whatsappButton:focus-visible{
+    outline:3px solid var(--blue);
+    outline-offset:4px;
+}
+
 @media (max-width:900px){
     .hero{
         grid-template-columns:1fr;
@@ -103,5 +136,17 @@
     .button{
         width:100%;
         margin-top:12px;
+    }
+
+    .whatsappButton{
+        right:max(1rem,env(safe-area-inset-right));
+        bottom:max(1rem,env(safe-area-inset-bottom));
+        width:3.5rem;
+        height:3.5rem;
+    }
+
+    .whatsappButton svg{
+        width:1.9rem;
+        height:1.9rem;
     }
 }
