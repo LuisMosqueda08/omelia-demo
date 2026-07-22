@@ -6,27 +6,44 @@ const Contact = () => {
       <div className={styles.container}>
         <header className={styles.header}>
           <h2 className={styles.title}>¿Listo para visitarnos?</h2>
-          <p className={styles.subtitle}>Nos encantará recibirte.</p>
+          <p className={styles.subtitle}>Tu próxima taza favorita está más cerca de lo que imaginas.</p>
         </header>
 
         <div className={styles.infoContainer}>
           <div className={styles.info}>
             <div className={styles.infoItem}>
-              <p className={styles.infoLabel}>Dirección</p>
+              <p className={styles.infoLabel}>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
+                  <circle cx="12" cy="10" r="2.5" />
+                </svg>
+                Dirección
+              </p>
               <p className={styles.infoText}>
                 C. Veinte 306, Cazones, 93240 Poza Rica de Hidalgo, Ver.
               </p>
             </div>
 
             <div className={styles.infoItem}>
-              <p className={styles.infoLabel}>Horarios</p>
+              <p className={styles.infoLabel}>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3.5 2" />
+                </svg>
+                Horarios
+              </p>
               <p className={styles.infoText}>
                 Lunes a domingo, 08:00 a. m. – 10:00 p. m.
               </p>
             </div>
 
             <div className={styles.infoItem}>
-              <p className={styles.infoLabel}>Teléfono</p>
+              <p className={styles.infoLabel}>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8.1 3.5 10 7.8 7.8 9.4a15.1 15.1 0 0 0 6.8 6.8l1.6-2.2 4.3 1.9v3a2 2 0 0 1-2 2A15.5 15.5 0 0 1 3 5.5a2 2 0 0 1 2-2h3.1Z" />
+                </svg>
+                Teléfono
+              </p>
 
               <a
                 className={styles.infoLink}
@@ -36,38 +53,6 @@ const Contact = () => {
               </a>
             </div>
 
-            <div className={`${styles.infoItem} ${styles.socials}`}>
-              <p className={styles.infoLabel}>Redes Sociales</p>
-              <div className={styles.socialLinks}>
-                <a
-                className={styles.socialLink}
-                href="https://www.instagram.com/omeliacafe"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visitar Instagram de Omelia"
-                title="Instagram"
-              >
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="3" y="3" width="18" height="18" rx="5" />
-                  <circle cx="12" cy="12" r="4.25" />
-                  <circle className={styles.socialDot} cx="17.4" cy="6.7" r="1" />
-                </svg>
-                </a>
-
-                <a
-                className={styles.socialLink}
-                href="https://www.facebook.com/634430339746883?ref=PROFILE_EDIT_xav_ig_profile_page_web"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visitar Facebook de Omelia"
-                title="Facebook"
-              >
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M14.2 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.27-.12-2.42-.12-2.4 0-4.04 1.46-4.04 4.15V9.9H8.23V13h2.71v8h3.26Z" />
-                </svg>
-                </a>
-              </div>
-            </div>
           </div>
 
           <div className={styles.map}>
