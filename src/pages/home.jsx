@@ -4,6 +4,7 @@ import Story from "../components/story/story";
 import FeaturedMenu from "../components/featuredmenu/featuredmenu";
 import Gallery from "../components/gallery/gallery";
 import Contact from "../components/contact/contact"
+import Footer from "../components/footer/footer"
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <FeaturedMenu />
       <Gallery />
       <Contact />
+      <Footer />
     </>
   );
 };

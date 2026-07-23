@@ -47,9 +47,9 @@ const Contact = () => {
 
               <a
                 className={styles.infoLink}
-                href="tel:+5217823981768"
+                href="tel:+527823981768"
               >
-                +52 1 782 398 1768
+                +52 782 398 1768
               </a>
             </div>
 
