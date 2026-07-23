@@ -89,7 +89,7 @@ const Hero = () => {
 
       <a
         className={styles.whatsappButton}
-        href={`https://wa.me/5217823981768?text=${whatsappMessage}`}
+        href={`https://wa.me/527823981768?text=${whatsappMessage}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contactar a Omelia por WhatsApp"
